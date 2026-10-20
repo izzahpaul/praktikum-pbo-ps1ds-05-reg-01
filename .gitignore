@@ -40,3 +40,8 @@ desktop.ini
 .project
 .classpath
 .settings/
+/modul-02-intro/project/praktikum1/target/
+/modul-03-konsep-dasar/project/Project_Modul_3/target/
+/modul-04-enkapsulasi/project/Project_Modul_4/target/
+/modul-05-relasi-antar-kelas/project/Project_Modul_5/target/
+/modul-06-inheritance/Project_Modul_6/target/
