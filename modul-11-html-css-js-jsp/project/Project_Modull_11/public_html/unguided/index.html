@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hasil Eksperimen Model</title>
+
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Judul Halaman -->
+        <header>
+            <h1>Hasil Eksperimen Model</h1>
+            <h2>Perbandingan Model Klasifikasi</h2>
+        </header>
+
+        <!-- Tabel Hasil Eksperimen -->
+        <section>
+            <h3>Data Hasil Eksperimen</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th rowspan="2">Model</th>
+                        <th colspan="3">Metrik Evaluasi (%)</th>
+                    </tr>
+                    <tr>
+                        <th>Akurasi</th>
+                        <th>Presisi</th>
+                        <th>Recall</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Logistic Regression</td>
+                        <td>82</td>
+                        <td>80</td>
+                        <td>78</td>
+                    </tr>
+
+                    <tr>
+                        <td>Decision Tree</td>
+                        <td>85</td>
+                        <td>83</td>
+                        <td>84</td>
+                    </tr>
+
+                    <tr id="model-terbaik">
+                        <td>Random Forest</td>
+                        <td>91</td>
+                        <td>90</td>
+                        <td>89</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Kesimpulan -->
+        <section>
+            <h3>Kesimpulan Hasil Eksperimen</h3>
+
+            <ul>
+                <li>
+                    Model <span class="terbaik">terbaik</span>
+                    adalah Random Forest dengan akurasi 91%.
+                </li>
+
+                <li>
+                    Model dengan recall terendah adalah
+                    Logistic Regression sebesar 78%.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Hasil Perhitungan JavaScript -->
+        <section class="hasil">
+            <h3>Analisis Data Menggunakan JavaScript</h3>
+
+            <p id="hasil-rata-rata"></p>
+            <p id="hasil-model-terbaik"></p>
+        </section>
+
+        <!-- Hyperlink -->
+        <section>
+            <p>
+                Pelajari dokumentasi lebih lanjut melalui
+                <a href="https://scikit-learn.org"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Dokumentasi Scikit-learn
+                </a>.
+            </p>
+        </section>
+
+        <!-- Form Pencarian -->
+        <section class="form-container">
+            <h3>Cari Model</h3>
+
+            <form action="#" method="POST">
+
+                <div class="form-group">
+                    <label for="nama-model">Nama Model:</label>
+
+                    <input
+                        type="text"
+                        id="nama-model"
+                        name="namaModel"
+                        placeholder="Masukkan nama model">
+                </div>
+
+                <div class="form-group">
+                    <label>Pilih Metrik:</label>
+
+                    <div class="pilihan">
+                        <input
+                            type="radio"
+                            id="akurasi"
+                            name="metrik"
+                            value="Akurasi">
+
+                        <label for="akurasi">Akurasi</label>
+                    </div>
+
+                    <div class="pilihan">
+                        <input
+                            type="radio"
+                            id="presisi"
+                            name="metrik"
+                            value="Presisi">
+
+                        <label for="presisi">Presisi</label>
+                    </div>
+
+                    <div class="pilihan">
+                        <input
+                            type="radio"
+                            id="recall"
+                            name="metrik"
+                            value="Recall">
+
+                        <label for="recall">Recall</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="jenis-data">Jenis Data:</label>
+
+                    <select id="jenis-data" name="jenisData">
+                        <option value="Training">Training</option>
+                        <option value="Validasi">Validasi</option>
+                        <option value="Testing" selected>Testing</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="btn-reset">
+                        Reset
+                    </button>
+
+                    <button type="submit" class="btn-submit">
+                        Submit
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+
+        // Array berisi akurasi ketiga model
+        const akurasiModel = [82, 85, 91];
+
+        // Fungsi untuk menghitung rata-rata
+        function hitungRataRata(data) {
+
+            let total = 0;
+
+            for (let i = 0; i < data.length; i++) {
+                total += data[i];
+            }
+
+            return total / data.length;
+        }
+
+        // Menampilkan hasil rata-rata
+        const rataRata = hitungRataRata(akurasiModel);
+
+        document.getElementById("hasil-rata-rata").textContent =
+            "Rata-rata akurasi: " + rataRata.toFixed(2) + "%";
+
+        // Object berisi data model terbaik
+        const modelTerbaik = {
+            nama: "Random Forest",
+            akurasi: 91
+        };
+
+        // Menampilkan nama model terbaik
+        document.getElementById("hasil-model-terbaik").textContent =
+            "Model dengan akurasi terbaik: "
+            + modelTerbaik.nama
+            + " (" + modelTerbaik.akurasi + "%)";
+
+    </script>
+
+</body>
+</html>

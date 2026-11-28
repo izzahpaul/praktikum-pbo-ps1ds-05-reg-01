@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Modul 11</title>
+        <style>
+            body{
+                background-color: #faf4e6;
+            }
+            ul { 
+                background-color: tomato; 
+                margin: 10px 5px 10px 5px; 
+                list-style-type: lower-alpha; 
+                list-style-position: inside; 
+            } 
+            ol { 
+                background-color: lightblue; 
+                list-style-type: lower-roman; 
+                padding: 5px 5px 15px 15px; 
+                list-style-position: inside; 
+            } 
+            h1 {  
+                text-align: center;  
+            } 
+        </style>
+    </head>
+    <body>
+        <h1>Heading IZZAH 1</h1>
+        <h2>Heading 2</h2>
+        <h6>Heading 6</h6>
+
+        <a href="www.google.co.id">Visit Google</a>
+
+        <table width="80%" height="50%" border="1">
+            <tr>
+                <th>Nama Lengkap</th>
+                <th>Kota Kelahiran</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Abdullah Ahmad Izzah</td>
+                <td>Makassar</td>
+                <td>17</td>
+            </tr>
+        </table>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Pitstone-windmill.600px.jpg?utm_source=id.wikipedia.org&utm_campaign=index&utm_content=original" width="40%" height="40%"/>
+
+        <audio controls>
+            <source src="" type="">
+        </audio>
+
+        <video width="40%" controls>
+            <source src="https://youtu.be/N3FtxB8icrY?si=dL-p3j1EGY4qh95c" type="video/mp4">
+        </video>
+
+         <h1>Formulir Pendaftaran Praktikan</h1> 
+        <form action="#" method="POST"> 
+            <div class="form-group"> 
+                <label for="nama_id">Nama:</label> 
+                <input type="text" name="nama_input" id="nama_id" placeholder="Input Nama" value="Praktikan" readonly> 
+            </div> 
+            <div class="form-group"> 
+                <label for="uname_id">Username:</label> 
+                <input type="text" name="uname_input" id="uname_id" placeholder="Input Username" value="Praktikum" disabled> 
+            </div> 
+            <div class="form-group"> 
+                <label for="password_id">Password:</label> 
+                <input type="password" name="password_input" id="password_id" placeholder="Input Password"> 
+            </div> 
+            <div class="form-group"> 
+                <label for="email_id">Email:</label> 
+                <input type="email" name="email_input" id="email_id" placeholder="Input Email"> 
+            </div> 
+            <fieldset> 
+                <legend>Jenis Kelamin</legend> 
+                <div> 
+                    <input type="radio" name="jk_input" id="pria" value="Pria"> 
+                    <label for="pria">Pria</label> 
+                </div> 
+                <div> 
+                    <input type="radio" name="jk_input" id="wanita" value="Wanita"> 
+                    <label for="wanita">Wanita</label> 
+                </div> 
+            </fieldset> 
+            <fieldset> 
+                <legend>Hobi</legend> 
+                <div> 
+                    <input type="checkbox" name="hobi_input" id="renang" value="Renang"> 
+                    <label for="renang">Renang</label> 
+                </div> 
+                <div> 
+                    <input type="checkbox" name="hobi_input" id="bersepeda" value="Bersepeda"> 
+                    <label for="bersepeda">Bersepeda</label> 
+                </div> 
+                <div> 
+                    <input type="checkbox" name="hobi_input" id="memancing" value="Memancing"> 
+                    <label for="memancing">Memancing</label> 
+                </div> 
+            </fieldset> 
+            <div class="form-group"> 
+                <label for="jp_id">Jenjang Pendidikan:</label> 
+                <select name="jp_input" id="jp_id"> 
+                    <option value="" selected>------Pilih------</option> 
+                    <option value="D3">Tamat D3</option> 
+                    <option value="S1">Tamat S1</option> 
+                    <option value="S2">Tamat S2</option> 
+                    <option value="S3">Tamat S3</option> 
+                </select> 
+            </div> 
+            <div class="form-group"> 
+                <label for="kritik_saran">Kritik & Saran:</label> 
+                <textarea id="kritik_saran" name="kritik_saran" rows="5"></textarea> 
+            </div> 
+            <div class="form-actions"> 
+                <button type="button" class="btn-cancel">Cancel</button> 
+                <button type="submit" class="btn-submit">Submit</button> 
+            </div> 
+        </form>
+
+        <h3>List of Property</h3> 
+        <ol type="1"> 
+        <li>Indoor 
+            <ul type="circle"> 
+                <li>Sofa</li> 
+            </ul> 
+            <ul type="disc"> 
+                <li>Tanaman Hias</li> 
+            </ul> 
+            <ul type="square"> 
+                <li>Lampu Baca</li> 
+            </ul> 
+            <ul type="none"> 
+                <li>Rak Buku</li> 
+            </ul> 
+        </li> 
+        <li>Outdoor 
+            <ol type="A"> 
+                <li>Payung Pantai</li> 
+            </ol> 
+            <ol type="a"> 
+                <li>Ayunan</li> 
+            </ol>
+            <ol type="I"> 
+                <li>Kursi Taman</li> 
+            </ol> 
+            <ol type="i"> 
+                <li>Lampu Taman</li> 
+            </ol> 
+        </li> 
+        </ol>
+        <!-- ... konten HTML dan form kamu sebelumnya ... -->
+
+        <script>
+            var a;
+            var nama = 'Budi';
+            nama = 1;
+            console.log("nama:", nama);
+
+            var data = ['satu', 2, true];
+            var arr2 = [[1, 2], ['satu', 'dua']];
+
+            console.log("data[2]:", data[2]);
+            console.log("arr2[1][0]:", arr2[1][0]);
+            console.log("data[10]:", data[10]);
+
+            data.push('d');
+            data.pop();
+            console.log("length:", data.length, "data:", data);
+
+            var objek_kosong = {};
+            var mobil = {
+                "warna-badan": "merah",
+                "nomor-polisi": "BK1234AB"
+            };
+
+            var jadwal1 = {
+                platform: 34,
+                telah_berangkat: false,
+                tujuan: "Medan",
+                asal: "Jakarta"
+            };
+
+            var jadwal2 = {
+                platform: 34,
+                telah_berangkat: false,
+                asal: {
+                    kode_kota: "MDN",
+                    nama_kota: "Medan",
+                    waktu: "2013-12-29 14:00"
+                },
+                tujuan: {
+                    kode_kota: "JKT",
+                    nama_kota: "Jakarta",
+                    waktu: "2013-12-29 17.30"
+                }
+            };
+
+            console.log("warna awal:", mobil["warna-badan"]);
+            console.log("platform:", jadwal2.platform);
+
+            mobil["warna-badan"] = "pink";
+            console.log("warna setelah diubah:", mobil["warna-badan"]);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,142 @@
+
+/* Pengaturan dasar halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+/* Container utama */
+.container {
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+/* Judul halaman */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #234b73;
+}
+
+h2 {
+    color: #444;
+}
+
+/* Judul bagian */
+h3 {
+    color: #234b73;
+    margin-top: 25px;
+}
+
+/* Tampilan tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th {
+    background-color: #356b99;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Sorotan khusus untuk satu baris model terbaik */
+#model-terbaik {
+    background-color: #d9f2d9;
+    font-weight: bold;
+}
+
+/* Penanda kata terbaik */
+.terbaik {
+    background-color: yellow;
+    font-style: italic;
+    display: inline;
+}
+
+/* Hasil JavaScript */
+.hasil {
+    background-color: #eef5fc;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Form pencarian */
+.form-container {
+    background-color: #eeeeee;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Pilihan radio */
+.pilihan {
+    margin-bottom: 5px;
+}
+
+.pilihan input {
+    margin-right: 5px;
+}
+
+.pilihan label {
+    display: inline;
+    font-weight: normal;
+}
+
+/* Tombol form */
+.form-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-reset {
+    background-color: #aaa;
+    color: white;
+}
+
+.btn-submit {
+    background-color: #356b99;
+    color: white;
+}
